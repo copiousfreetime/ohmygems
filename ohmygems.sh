@@ -29,18 +29,19 @@ ohmygems() {
 
         GEM_PATH=${ORIG_GEM_PATH}
         PATH=$ORIG_PATH
+        unset OHMYGEMS_REPO
     else
         echo Switching to $name
 
         export GEM_HOME=~/.gem/repos/${name}
         export GEM_PATH=${ORIG_GEM_HOME}:${ORIG_GEM_PATH}
         export PATH=${ORIG_PATH}:${GEM_HOME}/bin
+        export OHMYGEMS=$name
     fi
 
     echo
     echo GEM_PATH=${GEM_PATH:-not set}
     echo GEM_HOME=${GEM_HOME:-not set}
     echo PATH=$PATH
+    echo OHMYGEMS=${OHMYGEMS}
 }
-
-alias omg=ohmygems
