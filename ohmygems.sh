@@ -29,7 +29,7 @@ ohmygems() {
 
         GEM_PATH=${ORIG_GEM_PATH}
         PATH=$ORIG_PATH
-        unset OHMYGEMS_REPO
+        unset OHMYGEMS
     else
         echo Switching to $name
 
@@ -43,5 +43,5 @@ ohmygems() {
     echo GEM_PATH=${GEM_PATH:-not set}
     echo GEM_HOME=${GEM_HOME:-not set}
     echo PATH=$PATH
-    echo OHMYGEMS=${OHMYGEMS}
+    echo OHMYGEMS=${OHMYGEMS:-not set}
 }
