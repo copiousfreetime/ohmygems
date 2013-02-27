@@ -15,7 +15,7 @@ ohmygems() {
         echo
         echo "Available repos:"
         echo
-        ls ~/.gem/repos | pr -o2 -l1
+        ls ~/.gem/repos | pr -o2 -l1 | sed "s/^  ${OHMYGEMS}$/* ${OHMYGEMS}/g"
         echo
         return
     elif [ $name = "reset" ]; then
